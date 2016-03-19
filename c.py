@@ -9,4 +9,4 @@ if __name__=="__main__":
   sc = SparkContext(conf=conf)
   sqlContext = SQLContext(sc)
   df = sqlContext.read.json("tweets/*.json")
-  df.printSchema()
+  

@@ -9,7 +9,8 @@ My main step is like this :
 3# The remaining two attributes,date and context. I made up a dictionary for those stocks I want to analysis and if the split the context by space. If the context contains the key words we want then I will keep them,otherwise I will delete them.
 4# i save the rdd to a txt file and start my next step.The reason for making this choice is simply that text files are easier to work with. 
 The Reason I use pyspark is Python scripts contain multiple functions, whose purpose includes counting the instances of company names from the Dow Jones Index and computing the ratio of good-sentiment words and bad-sentiment words. 
-###(2)the second step downloading the stock return data.
+###(2)
+the second step downloading the stock return data.
 I used Yahoo API to download the stock daily close data. And calculate the daily return by using today's close price devided by last day's close price and minus 1. I save it as a text file and also upload it to Hadoop HDFS.
 ###(3)
 I join the information from these two text files by the date and make our data set look like:

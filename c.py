@@ -11,5 +11,5 @@ if __name__=="__main__":
   df = sqlContext.read.json("tweets/cleaned_2013_01_0.json")
   fr = df.filter(df["lang"].like('%en%'))
   df1=sc.parallelize(fr.collect())
-  df1.saveAsTextFile("tweets2/2013_01_0.txt")
+  df1.write.save("tweets2/2013.txt",format="text")
   #print df1

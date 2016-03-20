@@ -6,7 +6,7 @@ import math
 import random as rd
 import pandas.io.data as web
 from datetime import datetime
-SYMBOL=['GS','GOOG']
+SYMBOL = ['BA', 'DD','AMD', 'INTC','PFE', 'MRK','NKE', 'VZ','GOOG']
 start = datetime(2012,12,31)
 end = datetime(2014,1,1)
 stockRawData = web.DataReader(SYMBOL, 'yahoo', start, end)

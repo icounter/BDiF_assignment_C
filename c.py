@@ -18,8 +18,8 @@ if __name__=="__main__":
   sc = SparkContext(conf=conf)
   sqlContext = SQLContext(sc)
   df = sqlContext.read.json("tweets/cleaned_2013_01_0.json")
-  df=df.select(["created_at","text"])
   fr = df.filter(df["lang"].like('%en%'))
+  fr=fr.select(["created_at","text"])
   rdd=fr.rdd
   rdd1=rdd.map(mapp)
   rdd1.saveAsTextFile("tweets3")

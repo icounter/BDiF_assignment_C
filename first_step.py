@@ -35,7 +35,7 @@ if __name__=="__main__":
   conf = conf.setMaster("local[*]")
   sc = SparkContext(conf=conf)
   sqlContext = SQLContext(sc)
-  df = sqlContext.read.json("tweets/cleaned_2013_02_0.json")
+  df = sqlContext.read.json("tweets/*.json")
   df = df.filter(df["lang"].like('%en%'))
   df=df.select(["created_at","text"])
   rdd=df.rdd

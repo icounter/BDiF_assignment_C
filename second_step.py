@@ -11,11 +11,7 @@ def mapp(x):
   context2=context.split("\t")[1]
   key=context.split("\t")[0]
   return2=return3.split(",")[dic2[compdic[key]]]
-  res=[x[0]]
-  res.append(compdic[key])
-  res.append(return2)
-  for i in context2.split(" "):
-    res.append(i)
+  res="\t".join([x[0],key,return2,context2])
   return res
 if __name__=="__main__":
   conf = SparkConf().setAppName(APP_NAME)

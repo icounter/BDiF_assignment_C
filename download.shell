@@ -1,5 +1,5 @@
 #!/bin/bash
-export datamonth=1
+export datamonth=0
 while [ $datamonth -lt 2 ]; do
 let datamonth=datamonth+1
 newdatamonth=`echo $datamonth | awk '{printf("%02d",$1)}' `

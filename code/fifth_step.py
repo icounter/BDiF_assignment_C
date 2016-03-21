@@ -1,4 +1,5 @@
 __author__ = 'zhuchao1'
+#import file
 from pyspark.mllib.regression import LabeledPoint, LinearRegressionWithSGD, LinearRegressionModel
 import os
 import random
@@ -6,6 +7,7 @@ import sys
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 APP_NAME = "sentiment_regression"
+#stock number
 stock_cnt = 9
 
 # Load and parse the data

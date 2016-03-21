@@ -5,9 +5,11 @@ import sys
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 APP_NAME = "My Spark Application"
-
+#stock number
 stock_cnt = 9
+#key word dic
 sentimentdic = {}
+#extract word
 def extract_feature(content):
   def work(content, dic):
     coll = content.split("\t")

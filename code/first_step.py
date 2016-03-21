@@ -2,7 +2,7 @@ import os
 import sys
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
-APP_NAME = "My Spark Application"
+APP_NAME = "Clean data"
 
 def get_compid(strs):
   compdic = {'boeing':"0", 'google':"1",  'amd':"2",  'dupont':"3", 'intel':"4",   'pfizer':"5",  'merck':"6",  'nike':"7",  'verizon':"8"}
@@ -41,7 +41,7 @@ if __name__=="__main__":
   rdd=df.rdd
   rdd1=rdd.flatMap(mapp)
   print rdd1.count()
-  rdd1.saveAsTextFile("tws4")
+  rdd1.saveAsTextFile("step1")
   #df1=sc.parallelize(fr.collect()).saveAsTextFile("tweets2/2013_01.txt")
   #df1.write.save("tweets2/2013.txt",format="text")
   #print df1

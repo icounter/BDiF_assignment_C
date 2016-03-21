@@ -45,3 +45,4 @@ if __name__=="__main__":
   #df1=sc.parallelize(fr.collect()).saveAsTextFile("tweets2/2013_01.txt")
   #df1.write.save("tweets2/2013.txt",format="text")
   #print df1
+

@@ -21,4 +21,6 @@ And save my datasets to be a text file. After that I will do the next step which
 In the good_bad analysis,I search the context in the last step and use the dictioanry named LoughranMcDonald_MasterDictionary which contains some good and bad key words. I use context search the number of good or bad words and use (good-bad)/number of contexts(good_bad ratio).Paying attention to the negation words, I specifically check if there are negation words such as “not,” “never,” and “rarely,” and count these as the opposite. Next, I define a variable call good/bad ratio as an indicator for whether the stock prices will move up or down.
 ###(5)
 After I sort out these details, the core step of predicting stock price movements is constructing a regression relationship between the good/bad ratio and the stock returns. The simple regression function will serve as my model for predicting stock prices in the future.So in the end I drop the datetime and again use a regression fucntion to train the dataset and get the return. 
-
+######file:
+data is the code I write
+others are the temp file or the temp data I keep

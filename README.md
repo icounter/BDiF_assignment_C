@@ -22,5 +22,5 @@ In the good_bad analysis,I search the context in the last step and use the dicti
 ###(5)
 After I sort out these details, the core step of predicting stock price movements is constructing a regression relationship between the good/bad ratio and the stock returns. The simple regression function will serve as my model for predicting stock prices in the future.So in the end I drop the datetime and again use a regression fucntion to train the dataset and get the return. 
 ######file:
-data is the code I write
-others are the temp file or the temp data I keep
+code file is the code I write
+others like data are the temp file or the temp data I keep

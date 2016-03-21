@@ -23,11 +23,11 @@ if __name__=="__main__":
   #parts = df.map(lambda x: (x.split(" ")[0], x)))
   #df1=df.take(1)
   #print df1
-  df2=sc.textFile("tws4")
+  df2=sc.textFile("step1")
   parts2=df2.map(lambda l: ((l.split("\t")[0],"\t".join(l.split("\t")[1:]))))
   parts3=parts2.join(parts)
   part4=parts3.map(mapp)
-  part4.saveAsTextFile("tws5")
+  part4.saveAsTextFile("setp3")
   #print parts4.take(1)
   #df3=df2.take(1)
   #print df3

@@ -4,7 +4,7 @@ import random
 import sys
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
-APP_NAME = "My Spark Application"
+APP_NAME = "Good_Bad Analysis"
 #stock number
 stock_number = 9
 #key word dic
@@ -36,7 +36,8 @@ if __name__=="__main__":
   conf = SparkConf().setAppName(APP_NAME)
   conf = conf.setMaster("local[*]")
   sc = SparkContext(conf=conf)
-  twsdata = sc.textFile("step2");
+  #datasource
+  twsdata = sc.textFile("step3");
 
   sentimentdic_src = sc.textFile("word_dic");
   for p in sentimentdic_src.collect():
@@ -45,4 +46,4 @@ if __name__=="__main__":
 
   res=twsdata.map(extract_feature)
   print res.count()
-  res.saveAsTextFile("step3")
+  res.saveAsTextFile("step4")

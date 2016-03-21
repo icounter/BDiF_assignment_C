@@ -6,7 +6,7 @@ from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 APP_NAME = "My Spark Application"
 #stock number
-stock_cnt = 9
+stock_number = 9
 #key word dic
 sentimentdic = {}
 #extract word
@@ -16,7 +16,7 @@ def extract_feature(content):
     col = coll[3].split(" ")
     retval = coll[2]
     stid = int(coll[1])
-    res = [0.0, 0.0] * stock_cnt
+    res = [0.0, 0.0] * stock_number
     for w in col:
       if sentimentdic.has_key(w.lower()):
         if sentimentdic[w.lower()] == 1:

@@ -5,7 +5,7 @@ from pyspark.sql import SQLContext
 APP_NAME = "My Spark Application"
 def mapp(x):
   compdic = {'0':"boeing", '1':"google",  '2':"amd", '3':"dupont", '4':"intel",   '5':"pfizer",  '6':"merck",  '7':"nike", '8':"verizon"}
-  dic2={'boeing':1,'google':3,'amd':0,'dupont':2,'intel':4,'pfizer':7,'merck':5,'nike':6,'verzion':8}
+  dic2={'boeing':1,'google':3,'amd':0,'dupont':2,'intel':4,'pfizer':7,'merck':5,'nike':6,'verizon':8}
   context=x[1][0]
   return3=x[1][1]
   context2=context.split("\t")[1]
@@ -23,11 +23,11 @@ if __name__=="__main__":
   #parts = df.map(lambda x: (x.split(" ")[0], x)))
   #df1=df.take(1)
   #print df1
-  df2=sc.textFile("step1")
+  df2=sc.textFile("tweets2/step1.txt")
   parts2=df2.map(lambda l: ((l.split("\t")[0],"\t".join(l.split("\t")[1:]))))
   parts3=parts2.join(parts)
   part4=parts3.map(mapp)
-  part4.saveAsTextFile("setp3")
+  part4.saveAsTextFile("step33/step3.txt")
   #print parts4.take(1)
   #df3=df2.take(1)
   #print df3
